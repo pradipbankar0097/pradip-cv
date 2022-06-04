@@ -15,7 +15,7 @@ from pathlib import Path
 
 # Configure Django App for Heroku.
 import django_heroku
-django_heroku.settings(locals())
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-%56qv#pf@2ck876i#6sx8q(s8b0nhiovhpi+_u(9(6!cg%&lwt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','localhost','pradip32767.herokuapp.com']
 
 
 # Application definition
@@ -134,3 +134,5 @@ MEDIA_ROOT = 'uploads'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())

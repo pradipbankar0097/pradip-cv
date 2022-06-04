@@ -1,1 +1,1 @@
-web: gunicorn pradip32767.wsgi
+web: gunicorn pradip32767.py
