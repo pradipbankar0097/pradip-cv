@@ -1,1 +1,1 @@
-web: gunicorn pradip32767.py
+web: python manage.py runserver
