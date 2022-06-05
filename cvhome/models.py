@@ -1,5 +1,6 @@
 from datetime import date
 from django.db import models
+from django.forms import CharField
 from django.utils import timezone
 
 class Project(models.Model):
@@ -16,4 +17,9 @@ class Project(models.Model):
     screenshot2 = models.ImageField(upload_to="uploads/screenshots")
     screenshot3 = models.ImageField(upload_to="uploads/screenshots")
     screenshot4 = models.ImageField(upload_to="uploads/screenshots")
+
+class MyDetails(models.Model):
+    name_id = models.CharField(max_length=50,default='pradip')
+    name = models.CharField(max_length=100, default="Pradip Bankar")
+    photo = models.ImageField()
 

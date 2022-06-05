@@ -21,6 +21,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('',views.index,name="index"),
+    path('index',views.index,name="index"),
+    path('index.html',views.index,name="index"),
     path('works-setails',views.work_detail,name="wd"),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
