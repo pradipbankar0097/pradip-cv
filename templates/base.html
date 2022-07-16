@@ -1,75 +1,90 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    {% load static %}
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Google Fots -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-      <!-- Remixicon Icon -->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-      <!-- Remixicon Icon -->
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-      <!-- Main CSS -->
-      <link href="static/css/main.css" rel="stylesheet">
+
+<head>
+  {% load static %}
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fots -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- Remixicon Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Remixicon Icon -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Main CSS -->
+  <link href="static/css/main.css" rel="stylesheet">
 
 
-    <title>Pradip Bankar </title>
-  </head>
-  <body>
-    
-    <!-- header -->
-    <header class="ds-header" id="site-header">
-        <div class="container">
-            <div class="ds-header-inner">
-              <!-- logo -->
-              <a href="index.html" class="ds-logo">
-                <span>PB</span>Pradip Bankar
-              </a>
-              <!-- logo -->
-              <!-- social -->
-              <ul class="ds-social">
-                <li><a href="https://github.com/pradipbankar0097" target="_blank"><i class="ri-github-fill"></i></a></li>
-                <li><a href="https://www.codechef.com/users/pradip0097" target="_blank"><img style="-webkit-filter: invert(.75);
-                  filter: invert(.75);" width="20px" src="https://icons-for-free.com/download-icon-codechef-1324440139527402917_0.svg" alt=""></a></li>
-                <li><a href="https://www.linkedin.com/in/pradip-bankar-6a49b0202/" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
-              </ul>
-              <!-- social -->
-            </div>
-        </div>
-    </header>
-    <!-- header -->
-    <!-- banner -->
-    {% block content %}
-    {% endblock content %}
-   <!--  footer -->
-   <footer class="ds-footer text-center">
-     <div class="container">
-        <section>
-          <span>Stay in touch</span>
-          <h4>Wanna talk?</h4>
-          <p>Feel free to contact me 😊</p>
-          <a href="mailto:pradipbankar0097@gmail.com" class="ds-button">Lets Talk</a>
-        </section>
-        <span class="ds-copyright">© No Copyright issue. Feel free to copy. </span>
-     </div>
-   </footer>
+  <title>Pradip Bankar </title>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header class="ds-header header-transparent" id="site-header">
+    <div class="container">
+      <div class="ds-header-inner">
+        <!-- logo -->
+        <a href="index.html" class="ds-logo">
+          <span>PB</span>Pradip Bankar
+        </a>
+        <!-- logo -->
+        <!-- social -->
+        <ul class="ds-social">
+          <li><a href="https://github.com/pradipbankar0097" target="_blank"><i class="ri-github-fill"></i></a></li>
+          <li><a href="https://auth.geeksforgeeks.org/user/pradipbankar0097/practice/" target="_blank">
+            <img width="20px" height="20px"  
+            src="data:image/png;base64,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"
+            /></a></li>
+          <li><a href="https://www.codechef.com/users/pradip0097" target="_blank"><img style="-webkit-filter: invert(.75);
+                  filter: invert(.75);" width="20px"
+                src="https://icons-for-free.com/download-icon-codechef-1324440139527402917_0.svg" alt=""></a></li>
+          <li><a href="https://www.linkedin.com/in/pradip-bankar-6a49b0202/" target="_blank"><i
+                class="ri-linkedin-fill"></i></a></li>
+        </ul>
+        <!-- social -->
+      </div>
+    </div>
+  </header>
+  <!-- header -->
+  <!-- banner -->
+  {% block content %}
+  {% endblock content %}
+  <!--  footer -->
+  <footer class="ds-footer text-center">
+    <div class="container">
+      <section>
+        <span>Stay in touch</span>
+        <h4>Wanna talk?</h4>
+        <p>Feel free to contact me 😊</p>
+        <a href="mailto:pradipbankar0097@gmail.com" class="ds-button">Lets Talk</a>
+      </section>
+      <span class="ds-copyright">© No Copyright issue. Feel free to copy. </span>
+    </div>
+  </footer>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
-    <script src="static/js/main.js"></script>
-  </body>
+  <script src="static/js/main.js"></script>
+
+
+</body>
+
 </html>

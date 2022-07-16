@@ -32,7 +32,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','localhost','pradip32767.herokuapp.com']
 
-
+TINYMCE_DEFAULT_CONFIG = {
+    'height': 360,
+    'width': 800,
+    
+    "menubar": "file edit view insert format tools table help",
+    "plugins": "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code "
+    "fullscreen insertdatetime media table paste code help wordcount spellchecker",
+    "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft "
+    "aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor "
+    "backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons "
+}
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,7 +53,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cvhome',
+    'tinymce',
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

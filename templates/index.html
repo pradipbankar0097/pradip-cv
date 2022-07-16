@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <!-- banner -->
-    
+
     <div class="ds-banner">
       <div class="container">
         <div class="row">
@@ -42,7 +42,7 @@
       <div class="container">
         <section>
             <h2 class="ds-heading">About Me</h2>
-            <p>{{about_me}}</p>
+            <p>{{about_me|safe}}</p>
             <div class="ds-button-sec text-center">
                 <a href="#" class="ds-button">Download Resume</a>
             </div>
@@ -55,7 +55,7 @@
     <div class="ds-skills-section">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+          <div class="">
              <h2 class="ds-heading">Core Skills</h2>
              <ul class="ds-skills-list">
                {% for skill in skills %}
@@ -63,7 +63,7 @@
                {% endfor %}
              </ul>
           </div>
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+          <!-- <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <h2 class="ds-heading">Other Skills</h2>
             <ul class="ds-skills-list">
               <li>Storyblok</li>
@@ -72,7 +72,7 @@
               <li>React</li>
               <li>Vuetify</li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -163,5 +163,7 @@
           </div>
      </div>
    </div>
+
+   
    <!--  Work -->
    {% endblock content %}

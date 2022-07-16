@@ -1,14 +1,16 @@
 from django.http import HttpRequest
 from django.shortcuts import render
+from .models import MyDetails
 
 
 
 def index(request:HttpRequest):
+    my_data = MyDetails.objects.get(name_id='pradip')
     data = {
-        "about_me" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum ante a porta blandit. Quisque velit tortor, ultricies in quam ut, luctus convallis metus. Nunc vitae felis rutrum, mattis justo quis, bibendum tellus. Integer bibendum eget dolor nec venenatis. Aliquam erat volutpat. Etiam et est vitae turpis accumsan vulputate. Curabitur et vehicula nisl, eu congue dolor. Vivamus nec hendrerit mi Nulla consequat tempor.",
-        "number_of_projects":40,
-        "number_of_internships":40,
-        "skills" : "JavaScript, Node.js, Express.js, MongoDB, Vue.js, React, Sequelize, Github, HTML".split(', ')
+        "about_me" : my_data.about_me,
+        "number_of_projects":my_data.no_of_projects,
+        "number_of_internships":my_data.no_of_internships,
+        "skills" : my_data.skills.split(',')
 
     }
     return render(request,'index.html',data)
