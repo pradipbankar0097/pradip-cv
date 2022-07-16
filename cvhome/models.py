@@ -1,5 +1,6 @@
 from datetime import date
 from django.db import models
+from django.utils.timezone import now
 
 
 class Project(models.Model):
@@ -30,14 +31,16 @@ class MyDetails(models.Model):
 
 class Experience(models.Model):
     role = models.CharField(max_length=200,default='developer')
-    start_date = models.DateField(default=date.today())
-    end_date = models.DateField(default=date.today())
+    start_date = models.DateField(default=now)
+    end_date = models.DateField(default=now)
     about = models.TextField(default='learned so many things')
     # comma(,) seperated tags related to the experience
     tags = models.CharField(max_length=1000,default='React,MongoDB')
     company = models.CharField(max_length=200,default='microsoft')
     location = models.CharField(max_length=300,default='Aurangabad, Maharashtra')
     presently_working = models.BooleanField(default=True)
+    visible_on_resume = models.BooleanField(default=True)
+    visible_on_cv = models.BooleanField(default=True)
 
 class Internship(Experience):
     stipend = models.IntegerField(default=15000)
