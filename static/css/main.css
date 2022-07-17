@@ -34,7 +34,7 @@ svg,img { max-width: 100%; height: auto; }
 /*-----------------------------------------------------------------
   1. >>> Headr Style
 ----------------------------------------------------------------*/
-.ds-header{ position: fixed; top: 0; width: 100%; z-index: 5; background-color: #FFF8; padding: 70px 0;transition-delay: 0s;transition-duration: 0.4s;transition-property: all;transition-timing-function: ease; }
+.ds-header{ position: fixed; top: 0; width: 100%; z-index: 5; background-color: #FFF8; padding: 30px 0; transition-delay: 0s;transition-duration: 0.4s;transition-property: all;transition-timing-function: ease; }
 .ds-header.ds-fixed-header{ padding:20px 0;box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25); }
 .ds-header-inner{ display: flex; justify-content: space-between; align-items: center; }
 .ds-logo{ text-transform: uppercase; font-size: 18px; letter-spacing: 3px; color: #000; display: flex; align-items: center; }
@@ -57,6 +57,9 @@ svg,img { max-width: 100%; height: auto; }
 .ds-numbervalulist li:last-child{ margin-right: 0; }
 .ds-numbervalulist strong{ display: block; color: #F26464; font-size: 36px; font-weight: 800; }
 .ds-numbervalulist span{ font-size: 16px; letter-spacing: 1px; }
+
+/* manually added */
+.profile-pic-lg{height: 500px; object-fit: cover;}
 /*-----------------------------------------------------------------
   3. >>> About Style
 ----------------------------------------------------------------*/
@@ -84,7 +87,7 @@ svg,img { max-width: 100%; height: auto; }
 .ds-officename{ font-size: 24px; font-weight: 300; margin-bottom:10px; }
 .ds-experience-list span{ display: block; }
 span.ds-year{ color: #373737; font-size: 14px; font-weight: 700; padding-bottom: 10px; }
-span.ds-department{ color: #373737; font-weight: 500; font-size: 18px; padding-bottom: 30px; }
+span.ds-department{ color: #373737; font-weight: 500; font-size: 18px; }
 .ds-experience-list p{ font-size: 16px; line-height: 24px; font-weight: 300; }
 .ds-experience-list ul{ list-style: none; padding: 0; margin: 0; padding-top: 10px; }
 .ds-experience-list ul li{font-size: 16px; line-height: 24px; font-weight: 300; padding-left: 28px; position:relative; margin-bottom: 20px;}

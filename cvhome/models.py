@@ -1,4 +1,5 @@
 from datetime import date
+from email.policy import default
 from django.db import models
 from django.utils.timezone import now
 
@@ -13,10 +14,13 @@ class Project(models.Model):
     source_link = models.CharField(max_length=200, default="https://www.google.com")
     deployment_link = models.CharField(max_length=200, default="https://www.google.com")
     tags = models.CharField(max_length=700,default="MySQL,Python,ML,")
+    project_banner = models.ImageField(upload_to="uploads/project/banners", default=None)
     screenshot1 = models.ImageField(upload_to="uploads/screenshots")
     screenshot2 = models.ImageField(upload_to="uploads/screenshots")
     screenshot3 = models.ImageField(upload_to="uploads/screenshots")
     screenshot4 = models.ImageField(upload_to="uploads/screenshots")
+    visible_on_resume = models.BooleanField(default=True)
+    visible_on_cv = models.BooleanField(default=True)
 
 class MyDetails(models.Model):
     name_id = models.CharField(max_length=50,default='pradip')

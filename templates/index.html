@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
             <figure>
-              <img src="static/images/pradip.jpg">
+              <img class="profile-pic-lg" src="static/images/pradip.jpg">
             </figure>
           </div>
           <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
@@ -83,31 +83,21 @@
      <div class="container">
         <h2 class="ds-heading">Work Experience</h2>
         <div class="row ds-experience-list">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-              <section>
-                <span class="ds-year">2019 - Present</span>
-                <h3 class="ds-officename">Matrix Media Inc</h3>
-                <span class="ds-department">Full Stack developer</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                </ul>
-              </section>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-              <section>
-                <span class="ds-year">2018 - 2019</span>
-                <h3 class="ds-officename">Lexind</h3>
-                <span class="ds-department">Senior app developer</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-                </ul>
-              </section>
-            </div>
+
+          {% for exp in experiences %}
+          {% if exp.visible_on_cv %}
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <section>
+              <span class="ds-year">{{ exp.start_date }} - {{ exp.end_date }}</span>
+              <h3 class="ds-officename">{{ exp.company }}</h3>
+              <span class="ds-department">{{ exp.role }}</span>
+              <p>{{ exp.about | safe }}</p>
+            </section>
+          </div>
+
+          {% endif %}
+          {% endfor %}
+
         </div>
      </div>
    </div>
@@ -116,8 +106,30 @@
    <!--  Work -->
    <div class="ds-work-section">
      <div class="container">
-          <h2 class="ds-heading">Latest works</h2>
+          <h2 class="ds-heading">Projects</h2>
           <div class="ds-work-list-section">
+
+
+            {% for project in projects %}
+              {% if project.visible_on_cv %}
+              <div class="ds-work-list">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                        <section>
+                            <h3 class="ds-work-tilte">Tripy mobile app</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales. </p>
+                            <a href="works-setails" class="ds-button">Details</a>
+                        </section>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                        <figure><img src="static/images/work-1.jpg"></figure>
+                    </div>
+                </div>
+              </div>
+              {% endif %}
+            {% endfor %}
+
+
             <div class="ds-work-list">
               <div class="row">
                   <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
