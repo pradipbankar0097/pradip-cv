@@ -83,7 +83,11 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries':{
+            'filter_tags':'templatetags.filter',
         },
+        },
+        
     },
 ]
 
@@ -139,6 +143,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+    "uploads",
 ]
 
 MEDIA_ROOT = 'uploads'

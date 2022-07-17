@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <!-- banner -->
-
+{% load filter_tags %}
     <div class="ds-banner">
       <div class="container">
         <div class="row">
@@ -59,7 +59,7 @@
              <h2 class="ds-heading">Core Skills</h2>
              <ul class="ds-skills-list">
                {% for skill in skills %}
-               <li>{{skill}}</li>
+               <li>{{ skill }}</li>
                {% endfor %}
              </ul>
           </div>
@@ -92,6 +92,13 @@
               <h3 class="ds-officename">{{ exp.company }}</h3>
               <span class="ds-department">{{ exp.role }}</span>
               <p>{{ exp.about | safe }}</p>
+              <div class="ds-skills-list">
+                
+                {% for tag in exp.tags|split:',' %}
+                <li>{{ tag }}</li>
+                {% endfor %}
+                
+              </div>
             </section>
           </div>
 
@@ -116,13 +123,13 @@
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
                         <section>
-                            <h3 class="ds-work-tilte">Tripy mobile app</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales. </p>
-                            <a href="works-setails" class="ds-button">Details</a>
+                            <h3 class="ds-work-tilte">{{ project.name }}</h3>
+                            {{ project.small_desc|safe }}
+                            <a href="works-setails/{{project.id}}" class="ds-button">Details</a>
                         </section>
                     </div>
                     <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-                        <figure><img src="static/images/work-1.jpg"></figure>
+                        <figure><img src="{{project.project_banner}}"></figure>
                     </div>
                 </div>
               </div>
@@ -130,48 +137,6 @@
             {% endfor %}
 
 
-            <div class="ds-work-list">
-              <div class="row">
-                  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                      <section>
-                          <h3 class="ds-work-tilte">Tripy mobile app</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales. </p>
-                          <a href="works-setails" class="ds-button">Details</a>
-                      </section>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-                      <figure><img src="static/images/work-1.jpg"></figure>
-                  </div>
-              </div>
-            </div>
-            <div class="ds-work-list">
-              <div class="row">
-                  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                      <section>
-                          <h3 class="ds-work-tilte">Hello mobile app</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales. </p>
-                          <a href="works-setails.html" class="ds-button">Details</a>
-                      </section>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-                      <figure><img src="static/images/work-2.jpg"></figure>
-                  </div>
-              </div>
-            </div>
-            <div class="ds-work-list">
-              <div class="row">
-                  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                      <section>
-                          <h3 class="ds-work-tilte">Cute cookies app</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales. </p>
-                          <a href="works-setails.html" class="ds-button">Details</a>
-                      </section>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-                       <figure><img src="static/images/work-3.jpg"></figure>
-                  </div>
-              </div>
-            </div>
           </div>
      </div>
    </div>

@@ -12,36 +12,18 @@
       <div class="row justify-content-center">
         <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
             <header class="ds-work-det-hed">
-                <h1 class="ds-work-det-title">Tripy mobile app</h1>
-                <span class="ds-work-det-dep">Mobile development - 2019</span>
+                <h1 class="ds-work-det-title">{{project.name}}</h1>
+                <span class="ds-work-det-dep">{{project.domain}}</span>
             </header>
-            <figure><img src="static/images/work-details-image-1.jpg"></figure>
+            <figure><img src="/{{project.project_banner}}"></figure>
             <div class="ds-work-content-sec">
                 <div class="row justify-content-center">
                     <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-                        <p>Phasellus non faucibus purus, a venenatis diam. In faucibus orci mauris, porttitor egestas diam elementum non. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor.</p>
-
-                        <p>Curabitur quis tortor sit amet ligula lobortis auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer ut turpis eget urna egestas maximus. </p>
-
-                        <h2>Sub Title for project</h2>
-                        <p>Phasellus non faucibus purus, a venenatis diam. In faucibus orci mauris, porttitor egestas diam elementum non. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor.</p>
-
-                        <ul>
-                          <li>Phasellus non faucibus purus, a venenatis diam. In faucibus orci mauris, porttitor egestas diam elementum non.</li>
-                           <li>Vestibulum non metus tempus, sagittis libero sed, euismod purus.</li>
-                           <li>Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor. Vestibulum non metus tempus.</li>
-                        </ul>
+                        {{project.large_desc|safe}}
                     </div>
                 </div>
             </div>
-           <figure><img src="static/images/work-details-image-2.jpg"></figure>
-            <div class="ds-work-content-sec">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-                        <p>Phasellus non faucibus purus, a venenatis diam. In faucibus orci mauris, porttitor egestas diam elementum non. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor. Vestibulum non metus tempus, sagittis libero sed, euismod purus. Cras dolor nulla, hendrerit vitae libero eu, finibus ultricies dolor.</p>
-                    </div>
-                </div>
-            </div>
+           
         </div>
       </div>
   </div>
