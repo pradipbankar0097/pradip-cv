@@ -51,3 +51,12 @@ class Internship(Experience):
     
 class Job(Experience):
     salary = models.IntegerField(default=30000)
+
+class Education(models.Model):
+    institute = models.CharField(max_length=200,default='Government College of Engineering, Aurangabad')
+    edu_level = models.CharField(max_length=50,default='B.Tech.')
+    start_date = models.DateField(default=now)
+    end_date = models.DateField(default=now)
+    specialization = models.CharField(max_length=200,default='Information Technology')
+    visible_on_resume = models.BooleanField(default=True)
+    visible_on_cv = models.BooleanField(default=True)
